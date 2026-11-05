@@ -139,4 +139,12 @@ $$('.rv').forEach(el=>io.observe(el));
 
 /* init language */
 let saved=null; try{saved=localStorage.getItem('c94-lang')}catch(e){}
-setLang(saved || ((navigator.language||'').toLowerCase().startsWith('ro')?'ro':'en'));
+setLang(saved || ((navigator.language||'').toLowerCase().startsWith('ro')?'ro':'en'));  
+
+/* logo → scroll to top */
+document.querySelectorAll('.logo, a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  document.body.classList.remove('menu-open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  history.replaceState(null,'',location.pathname);
+}));
