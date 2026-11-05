@@ -135,11 +135,28 @@ $('#form').onsubmit=e=>{
 
 /* scroll reveal */
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-$$('.rv').forEach(el=>io.observe(el));
+const startReveal=()=>$$('.rv').forEach(el=>io.observe(el));
+
+/* preloader: creative94® letters → slide up → page */
+(function(){
+  const pl=document.getElementById('preloader'), root=document.documentElement;
+  const finish=()=>{root.classList.remove('is-loading');pl&&pl.remove();};
+  if(!pl || matchMedia('(prefers-reduced-motion: reduce)').matches){finish();startReveal();return;}
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const loaded=new Promise(r=>document.readyState==='complete'?r():addEventListener('load',r,{once:true}));
+  const fonts=document.fonts?document.fonts.ready:Promise.resolve();
+  Promise.race([Promise.all([loaded,fonts,wait(1900)]),wait(4000)]).then(async()=>{
+    pl.classList.add('out');           // word fades up
+    await wait(350);
+    pl.classList.add('done');          // black panel slides up
+    await wait(250); startReveal();     // hero blurs in behind it
+    await wait(900); finish();
+  });
+})();
 
 /* init language */
 let saved=null; try{saved=localStorage.getItem('c94-lang')}catch(e){}
-setLang(saved || ((navigator.language||'').toLowerCase().startsWith('ro')?'ro':'en'));  
+setLang(saved || ((navigator.language||'').toLowerCase().startsWith('ro')?'ro':'en'));
 
 /* logo → scroll to top */
 document.querySelectorAll('.logo, a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{
