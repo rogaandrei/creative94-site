@@ -21,7 +21,6 @@
     <a href="#studio" data-i18n="nav.studio">Studio</a>
     <a href="#projects"><span data-i18n="nav.projects">Projects</span><sup>04</sup></a>
     <a href="#services" data-i18n="nav.services">Services</a>
-    <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
   </div>
   <div class="nav-r">
@@ -35,7 +34,6 @@
   <a href="#studio" data-i18n="nav.studio">Studio</a>
   <a href="#projects" data-i18n="nav.projects">Projects</a>
   <a href="#services" data-i18n="nav.services">Services</a>
-  <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
   <a href="#contact" data-i18n="nav.contact">Contact</a>
 </div>
 
@@ -78,41 +76,67 @@
     <span class="eyebrow" data-i18n="clients.eb">Our clients</span>
     <span class="small" data-i18n="clients.note">Trusted by enterprise brands &amp; startups</span>
   </div>
-  <div class="marquee">
-    <div class="marquee-track" id="mq">
-      <!-- Replace text with client SVG logos when available -->
-      <div class="client">ENEOS<small>Romania</small></div>
-      <div class="client">HOLCIM</div>
-      <div class="client">Purcari</div>
-      <div class="client">Magier</div>
-      <div class="client">Navix<small>TMS</small></div>
-    </div>
+  <div class="client-grid">
+      <!-- Logos live in public/logos/. --h = optical height of each logo -->
+      <a class="client" href="https://magier.com/" target="_blank" rel="noopener" aria-label="Magier"><img class="gray" src="/logos/magier.svg" alt="Magier" style="--h:30px" loading="lazy"></a>
+      <a class="client" href="https://tastelabs.com/" target="_blank" rel="noopener" aria-label="Taste Labs"><img class="mono" src="/logos/tastelabs.svg" alt="Taste Labs" style="--h:17px" loading="lazy"></a>
+      <a class="client" href="https://purcariwineries.com/" target="_blank" rel="noopener" aria-label="Purcari Wineries"><img class="mono" src="/logos/purcari.svg" alt="Purcari Wineries" style="--h:30px" loading="lazy"></a>
+      <a class="client" href="https://www.eneos.us/" target="_blank" rel="noopener" aria-label="ENEOS"><img class="" src="/logos/eneos.png" alt="ENEOS" style="--h:22px" loading="lazy"></a>
+      <a class="client" href="https://www.holcim.md/ro" target="_blank" rel="noopener" aria-label="Holcim Moldova"><img class="mono" src="/logos/holcim.svg" alt="Holcim Moldova" style="--h:26px" loading="lazy"></a>
+      <a class="client" href="https://www.digitalgenius.com/" target="_blank" rel="noopener" aria-label="DigitalGenius"><img class="mono" src="/logos/digitalgenius.svg" alt="DigitalGenius" style="--h:24px" loading="lazy"></a>
+      <a class="client" href="https://theflightwall.com/" target="_blank" rel="noopener" aria-label="TheFlightWall"><img class="mono" src="/logos/flightwall.png" alt="TheFlightWall" style="--h:46px" loading="lazy"></a>
+      <a class="client" href="https://www.harbr.agency/" target="_blank" rel="noopener" aria-label="Harbr"><img class="mono" src="/logos/harbr.webp" alt="Harbr" style="--h:26px" loading="lazy"><span class="wm">Harbr</span></a>
+      <a class="client" href="https://geminicad.com/" target="_blank" rel="noopener" aria-label="Gemini CAD Systems"><img class="mono" src="/logos/geminicad.svg" alt="Gemini CAD Systems" style="--h:38px" loading="lazy"></a>
+      <a class="client" href="https://www.revelsi.com/" target="_blank" rel="noopener" aria-label="RevelSI"><img class="mono" src="/logos/revelsi.webp" alt="RevelSI" style="--h:22px" loading="lazy"></a>
   </div>
 </section>
 
 <!-- ============ PROJECTS ============ -->
 <section class="section wrap" id="projects" style="padding-top:110px">
-  <div class="head-row">
-    <span class="eyebrow" data-i18n="proj.eb">Selected work</span>
-    <h2 class="title rv" data-i18n="proj.title">Projects.</h2>
+  <div class="proj-head">
+    <span class="proj-count">(04)</span>
+    <div class="proj-title">
+      <h2 class="title rv" data-i18n="proj.title">Projects.</h2>
+      <span class="proj-year">©2026</span>
+    </div>
+    <p class="small proj-intro rv" data-i18n="proj.intro">We've helped enterprise brands and startups look sharper and grow. Here are a few selected projects.</p>
   </div>
   <div class="projects">
-    <!-- Each .art div can be swapped for <img src="..." style="width:100%;height:100%;object-fit:cover"> -->
-    <a class="proj rv" href="#contact">
-      <div class="proj-media grain"><div class="art art-2"></div><div class="mark"><em>E</em>ENEOS Romania</div><div class="tags"><span>Brand</span><span>Digital</span></div></div>
-      <div class="proj-bar">ENEOS Romania. <small data-i18n="proj.c1">/ brand &amp; digital</small><span class="dots">•••</span></div>
+    <a class="proj rv" href="#" data-project="eneos" aria-haspopup="dialog">
+      <div class="proj-bar"><b>ENEOS Romania.</b><small data-i18n="proj.c1">/ </small><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="proj-media grain">
+        <!-- Real image: <img class="proj-img" src="/img/projects/eneos.jpg" alt=""> (replaces .art) -->
+        <div class="art art-1"></div>
+        <img class="proj-logo" src="/logos/eneos.png" alt="ENEOS" style="--h:26px">
+        <div class="tags"><span>Brand</span><span>Digital</span></div>
+      </div>
     </a>
-    <a class="proj rv" href="#contact">
-      <div class="proj-media grain"><div class="art art-3"></div><div class="mark"><em>H</em>Holcim</div><div class="tags"><span>Design</span><span>Web</span></div></div>
-      <div class="proj-bar">Holcim. <small data-i18n="proj.c2">/ design &amp; web</small><span class="dots">•••</span></div>
+    <a class="proj rv" href="#" data-project="holcim" aria-haspopup="dialog">
+      <div class="proj-bar"><b>Holcim.</b><small data-i18n="proj.c2">/ </small><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="proj-media grain">
+        <!-- Real image: <img class="proj-img" src="/img/projects/holcim.jpg" alt=""> (replaces .art) -->
+        <div class="art art-2"></div>
+        <img class="proj-logo" src="/logos/holcim.svg" alt="Holcim" style="--h:30px">
+        <div class="tags"><span>Design</span><span>Web</span></div>
+      </div>
     </a>
-    <a class="proj rv" href="#contact">
-      <div class="proj-media grain"><div class="art art-1"></div><div class="mark" style="color:#1a1a1a"><em style="background:#1a1a1a;color:#fff">P</em>Purcari</div><div class="tags"><span style="color:#1a1a1a;background:rgba(0,0,0,.08)">Brand</span><span style="color:#1a1a1a;background:rgba(0,0,0,.08)">Visual</span></div></div>
-      <div class="proj-bar">Purcari. <small data-i18n="proj.c3">/ brand &amp; visual</small><span class="dots">•••</span></div>
+    <a class="proj rv" href="#" data-project="purcari" aria-haspopup="dialog">
+      <div class="proj-bar"><b>Purcari.</b><small data-i18n="proj.c3">/ </small><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="proj-media grain">
+        <!-- Real image: <img class="proj-img" src="/img/projects/purcari.jpg" alt=""> (replaces .art) -->
+        <div class="art art-3"></div>
+        <img class="proj-logo" src="/logos/purcari.svg" alt="Purcari Wineries" style="--h:38px">
+        <div class="tags"><span>Brand</span><span>Visual</span></div>
+      </div>
     </a>
-    <a class="proj rv" href="#contact">
-      <div class="proj-media grain"><div class="art art-4"></div><div class="mark"><em>N</em>Navix</div><div class="tags"><span>SaaS</span><span>UI/UX</span></div></div>
-      <div class="proj-bar">Navix. <small data-i18n="proj.c4">/ SaaS product UI</small><span class="dots">•••</span></div>
+    <a class="proj rv" href="#" data-project="navix" aria-haspopup="dialog">
+      <div class="proj-bar"><b>Navix.</b><small data-i18n="proj.c4">/ </small><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="proj-media grain">
+        <!-- Real image: <img class="proj-img" src="/img/projects/navix.jpg" alt=""> (replaces .art) -->
+        <div class="art art-4"></div>
+        <span class="proj-word">Navix</span>
+        <div class="tags"><span>SaaS</span><span>UI/UX</span></div>
+      </div>
     </a>
   </div>
 </section>
@@ -152,54 +176,13 @@
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
-<section class="section wrap process">
-  <div class="grid">
-    <span class="eyebrow" style="grid-column:span 3;align-self:start;padding-top:12px" data-i18n="proc.eb">How we work</span>
-    <h2 class="lead rv" data-i18n="proc.title">From first call to launch, <span class="muted">in four clear steps.</span></h2>
-  </div>
-  <div class="steps" id="steps"></div>
-</section>
-
 <!-- ============ APPROACH ============ -->
-<section class="wrap" style="padding-bottom:140px">
+<section class="wrap" style="padding-top:140px;padding-bottom:140px">
   <div class="grid approach">
     <div class="side"><b>creative94<sup>®</sup></b><p class="small" data-i18n="appr.side">Every project is designed for long-term success.</p></div>
     <div class="main">
       <p class="lead rv" data-i18n="appr.lead"><span class="muted">Our approach is simple:</span> clarity, speed and craft — every pixel and every line of code serves a clear purpose.</p>
       <p class="small rv" data-i18n="appr.p">We don't overpromise or hide behind buzzwords. We design brands and build websites that are easy to use, easy to update and built to grow with you.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRICING ============ -->
-<section class="dark-shell grain dark" id="pricing">
-  <div class="smoke"><b></b><b></b><b></b><b></b></div>
-  <div class="section wrap">
-    <div class="head-row">
-      <span class="eyebrow" data-i18n="price.eb">Simple pricing</span>
-      <h2 class="title rv" data-i18n="price.title">Pricing.</h2>
-    </div>
-    <div class="price-wrap" id="pw">
-      <div class="toggle-card">
-        <div><h4 data-i18n="price.q">Need ongoing design?</h4><p class="small" data-i18n="price.qp">Switch to a monthly subscription — a senior designer on call, without hiring.</p></div>
-        <button class="switch" id="sw" aria-pressed="false"><span data-i18n="price.proj">Per project</span><span class="sw"></span><span data-i18n="price.mon">Monthly</span></button>
-      </div>
-      <div class="plan-card">
-        <!-- Prices: edit the values in the I18N object below (price.v1 / price.v2) -->
-        <div class="plan-col">
-          <div class="plan-price"><span data-plan></span><small data-plan-unit></small></div>
-          <div class="plan-meta"><span data-i18n="price.time">Delivery time</span><b data-plan-time></b></div>
-        </div>
-        <div class="plan-col">
-          <ul class="plan-feat" data-plan-feat></ul>
-          <a href="#contact" class="plan-cta" data-i18n="cta.quote">Get a quote</a>
-        </div>
-      </div>
-    </div>
-    <div class="more">
-      <p class="small" data-i18n="more.eb">Looking for more?</p>
-      <p class="lead rv" data-i18n="more.p">Add motion, illustration, social content or AI-assisted development <span class="muted">— flexible add-ons shaped around your business, not ours.</span></p>
     </div>
   </div>
 </section>
@@ -260,6 +243,19 @@
   <div class="f-big">creative94<span class="reg">®</span></div>
   <div class="f-legal"><span>© 2026 SC Zanik Design SRL · Creative94 Studio</span><span data-i18n="f.legal">Privacy policy · Terms</span></div>
 </footer>
+
+<!-- ============ PROJECT MODAL ============ -->
+<!-- Content lives in src/projects.js (PROJECTS object) -->
+<div class="pm" id="pm" hidden>
+  <div class="pm-backdrop" data-pm-close></div>
+  <div class="pm-panel" role="dialog" aria-modal="true" aria-labelledby="pm-title" tabindex="-1">
+    <div class="pm-top">
+      <span class="pm-crumb">creative94<sup>®</sup> <span class="muted">/ <span data-i18n="pm.case">Case study</span></span></span>
+      <button class="pm-close" data-pm-close aria-label="Close"><i></i></button>
+    </div>
+    <div class="pm-body" id="pm-body"></div>
+  </div>
+</div>
 
 <script type="module" src="/src/main.js"></script>
 </body>
